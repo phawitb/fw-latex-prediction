@@ -2,35 +2,36 @@
 RUN : uvicorn api_prediction_with_adjerror:app --reload --port 8000
 POST : http://127.0.0.1:8000/predict
 {
-  "data": {
-    "pressure_board_temp": 0.3647457627118642,
-    "pressure_env_port1": 0.0699428216426412,
-    "pressure_env_port2": 0.8623649553705768,
-    "pressure_env_port3": 0.09191874664534061,
-    "pressure_env_port4": 0.6000553779349063,
-    "latex_board_temp": 0.35020519835841335,
-    "latex_env_port1": 0.04297192330376909,
-    "latex_env_port2": 0.707629518391446,
-    "latex_env_port3": 0.4327944098408234,
-    "latex_env_port4": 0.32820913650448624
+  "data":{
+    "pressure_board_temp": 30.88,
+    "pressure_env_port1": 25192.57,
+    "pressure_env_port2": 57076.92,
+    "pressure_env_port3": 32862.09,
+    "pressure_env_port4": 40913.93,
+    "latex_board_temp": 30.88,
+    "latex_env_port1": 25072.32,
+    "latex_env_port2": 56195.62,
+    "latex_env_port3": 40984.01,
+    "latex_env_port4": 31373.82 
   },
   "adj_error": {
     "pressure_board_temp": 0,
-    "pressure_env_port1": -0.06,
+    "pressure_env_port1": 0,
     "pressure_env_port2": 0,
-    "pressure_env_port3": 0.02,
+    "pressure_env_port3": 0,
     "pressure_env_port4": 0,
     "latex_board_temp": 0,
     "latex_env_port1": 0,
-    "latex_env_port2": -0.1,
+    "latex_env_port2": 0,
     "latex_env_port3": 0,
-    "latex_env_port4": 0.3
+    "latex_env_port4": 0
   }
 }
 
+
 RETURN :: 
 {
-    "predicted_drc_percent_manual": 28.871199999999888
+    "predicted_drc_percent_manual": 33.55199999999991
 }
 """
 
